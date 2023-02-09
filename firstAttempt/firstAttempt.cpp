@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,6 +9,7 @@ void solve() {
 	cin >> n >> k;
 
 	vector<int> a(n), p;
+	vector<pair<int, int>> maxPeaks;
 
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
