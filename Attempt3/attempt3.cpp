@@ -23,6 +23,21 @@ void solve() {
 			pS[i + 1] = pS[i] + 1;
 		}
 	}
+
+	bool found = false;
+	int mp = (k - 1) / 2;
+
+	while (!found) {
+		for (int i = 1; i <= (n - k + 1); i++) {
+			if (pS[i + k - 2] - pS[i] == mp) {
+				found = true;
+				break;
+			}
+			else {
+				mp--;
+			}
+		}
+	}
 }
 
 int main() {
